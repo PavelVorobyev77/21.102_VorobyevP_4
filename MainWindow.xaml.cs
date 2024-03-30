@@ -27,9 +27,9 @@ namespace _21._102_VorobyevP_4
         public MainWindow()
         {
             InitializeComponent();
-            context = new Entities();
-            LoadData.ItemsSource = context.Group.ToList();
-            query = context.Group;
+            context = new Entities(); // Создание экземпляра контекста базы данных
+            LoadData.ItemsSource = context.Group.ToList(); // Загрузка данных из базы данных в DataGrid
+            query = context.Group; // Инициализация запроса для работы с данными
         }
 
         private void SortComboBox_SelectionChanged(object sender, RoutedEventArgs e)
